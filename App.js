@@ -1,15 +1,8 @@
 import React from 'react';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
+import Router from './src/navigation/Router';
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Init app!</Text>
-      </SafeAreaView>
-    </>
-  );
+  return <Router />;
 };
 
 export default App;
