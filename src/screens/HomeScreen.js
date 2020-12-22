@@ -11,6 +11,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -38,6 +39,11 @@ const HomeScreen = () => {
         <Pressable
           style={styles.button}
           onPress={() => console.warn('Button clicked')}>
+          <Entypo
+            name="location-pin"
+            size={30}
+            style={{padding: 15, color: '#f15454'}}
+          />
           <Text style={styles.buttonText}>Explore nearby stays</Text>
         </Pressable>
       </ImageBackground>
@@ -68,7 +74,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 20,
     top: 50,
-    borderRadius: 30,
+    borderRadius: 40,
   },
   searchButtonText: {
     fontSize: 18,
@@ -76,16 +82,19 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
     marginTop: 25,
-    width: 190,
+    width: 230,
     marginLeft: 25,
-    padding: 10,
-    borderRadius: 5,
+    borderRadius: 30,
   },
   buttonText: {
     justifyContent: 'center',
     alignItems: 'center',
     fontSize: 18,
+    marginRight: 20,
     fontWeight: 'bold',
   },
 });
